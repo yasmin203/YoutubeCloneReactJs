@@ -5,7 +5,8 @@ import './index.css'
 import { Navbar,VideoDetail,ChannelDetail,SearchFeed,Feed} from './components'
 
 const App = () => (
-    <BrowserRouter >
+    <BrowserRouter basename={window.location.pathname || ''}>
+        {/* {console.log(window.location.pathname)} */}
     <Box sx={{backgroundColor:"#000"}}>
         <Navbar />
         <Routes>
